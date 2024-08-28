@@ -28,4 +28,13 @@ public class Bootcamp {
         conteudos = new LinkedHashSet<>();
 
     }
+
+    public void adicionarInscrito(Dev dev){
+        inscritos.add(dev);
+    }
+
+    public void adicionarConteudo(Conteudo conteudo) {
+        conteudos.add(conteudo);
+    }
+
 }

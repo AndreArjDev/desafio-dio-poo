@@ -1,4 +1,6 @@
+import br.com.dio.bootcamp.domain.Bootcamp;
 import br.com.dio.bootcamp.domain.Curso;
+import br.com.dio.bootcamp.domain.Dev;
 import br.com.dio.bootcamp.domain.Mentoria;
 
 public class Main {
@@ -16,6 +18,18 @@ public class Main {
         System.out.println(c.toString());
         System.out.println(m.toString());
 
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java");
+        bootcamp.setDescricao("Descricao Bootcamp");
+        bootcamp.adicionarConteudo(c);
+        bootcamp.adicionarConteudo(m);
+
+        Dev dev = new Dev();
+        dev.setNome("andre");
+        dev.inscreverBootcamp(bootcamp);
+        dev.progredir();
+        System.out.println(dev.calcularXp());
 
 
 
